@@ -1,0 +1,811 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #14213d;
+  color: #edf2f4;
+  line-height: 1.6;
+  background: linear-gradient(90deg, #14213d, #0c161a, #1e1e2f);
+  background-size: 300% 300%;
+  animation: gradient-animation 6s ease infinite;
+}
+  
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  
+  
+  h1, h2, h3 {
+    color: #edf2f4;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  header {
+    background: linear-gradient(270deg, #457b9d, #d904277e, #ef233b98, #264653);
+    background-size: 400% 400%;
+    animation: gradientShift 6s ease infinite;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  header .containerheader {
+    display: flex;
+    justify-content: flex-start; /* Keeps the logo on the left */
+    align-items: center;
+  }
+  
+  header .logo {
+    width: 400px;
+    height: auto;
+    margin-left: 30%;
+    animation: fadeInLogo 2s ease-in-out forwards;
+  }
+  
+  header nav {
+    position: relative;
+    margin-left: 30px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Adjusted gap for better spacing */
+    margin: 0;
+  }
+  
+  header nav ul li {
+    position: relative;
+  }
+  
+  header nav ul li a {
+    color: #edf2f4;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px 25px; /* Added padding for better clickability */
+    border-radius: 6px;  /* Slight rounding for smoother edges */
+  }
+  
+  header nav ul li a:hover {
+    color: #14213d; /* Premium hover color */
+    transform: scale(1.05); /* Subtle scaling effect */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+  }
+  
+  header nav ul li a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #d90429; /* Underline color matching hover color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  header nav ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: #14213d; /* Underline color changes on hover for a refined effect */
+  }
+  
+  @keyframes slideInHeader {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInLogo {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 50px;
+  background: linear-gradient(to right, #14213d, #242424 50%);
+  gap: 20px;
+  opacity: 0; /* Initially set opacity to 0 */
+  animation: fadeIn 2s forwards; /* Trigger fade-in animation */
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.hero-image video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  object-fit: cover; /* Ensures the video covers its container */
+  display: block;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+/* Hero Text */
+.hero-text {
+  max-width: 50%;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-30px); /* Position the text off-screen initially */
+  animation: fadeInText 2s forwards 0.5s; /* Text fade-in with delay */
+}
+
+@keyframes fadeInText {
+  0% {
+      opacity: 0;
+      transform: translateX(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #d3d3d3;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #ef233c, #d90429);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.4s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background: linear-gradient(90deg, #d90429, #ef233c);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(239, 35, 60, 0.6);
+}
+
+/* Hero Image */
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Position the image slightly below initially */
+  animation: fadeInImage 2s forwards 1s; /* Image fade-in with delay */
+}
+
+@keyframes fadeInImage {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+/* Featured Games Section */
+.featured-games {
+  padding: 50px 50px; /* Increased padding for larger section */
+  text-align: center;
+}
+
+.featured-games h2 {
+  margin-bottom: 50px;
+  font-size: 3.5rem; /* Much larger heading */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+/* Featured Grid - Flexbox for Layout */
+.featured-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px; /* Larger gap between cards */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Featured Card */
+.featured-card {
+  position: relative;
+  flex: 1 1 calc(33.33% - 50px); /* Large size for 3 cards per row */
+  max-width: 100%; /* Increased max-width for significantly larger cards */
+  height: 100%; /* Explicit height for larger visuals */
+  border-radius: 20px; /* Softer rounded edges */
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fills the card */
+  transition: transform 0.5s ease-in-out, filter 0.4s ease-in-out;
+  border-radius: 20px; /* Match border radius for seamless appearance */
+}
+
+/* Hover Effects for Featured Card */
+.featured-card:hover {
+  transform: translateY(-10px); /* Higher hover effect */
+  box-shadow: 0 20px 40px rgb(239, 35, 59); /* Bolder shadow */
+}
+
+.featured-card:hover img {
+  transform: scale(1.05); /* Larger zoom effect */
+  filter: brightness(0.8); /* Slightly darker image on hover */
+}
+
+/* Game Overlay */
+.game-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9); /* Darker overlay */
+  padding: 40px; /* Spacious overlay for bigger cards */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Larger spacing between text elements */
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.featured-card:hover .game-overlay {
+  transform: translateY(0); /* Smooth slide-up effect */
+}
+
+
+.featured-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px; /* Larger gap between cards */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Featured Card */
+.featured-card2 {
+  position: relative;
+  flex: 1 1 calc(33.33% - 50px); /* Large size for 3 cards per row */
+  max-width: 100%; /* Increased max-width for significantly larger cards */
+  height: 100%; /* Explicit height for larger visuals */
+  border-radius: 20px; /* Softer rounded edges */
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.featured-card2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fills the card */
+  transition: transform 0.5s ease-in-out, filter 0.4s ease-in-out;
+  border-radius: 20px; /* Match border radius for seamless appearance */
+}
+
+/* Hover Effects for Featured Card */
+.featured-card2:hover {
+  transform: translateY(-10px); /* Higher hover effect */
+  box-shadow: 0 20px 40px rgb(35, 239, 72); /* Bolder shadow */
+}
+
+.featured-card2:hover img {
+  transform: scale(1.05); /* Larger zoom effect */
+  filter: brightness(0.8); /* Slightly darker image on hover */
+}
+
+/* Game Overlay */
+.game-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9); /* Darker overlay */
+  padding: 40px; /* Spacious overlay for bigger cards */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Larger spacing between text elements */
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.featured-card2:hover .game-overlay {
+  transform: translateY(0); /* Smooth slide-up effect */
+}
+
+
+/* Text Styling Inside Overlay */
+.game-overlay h3 {
+  font-size: 1.2rem; /* Larger title font */
+  margin-bottom: 20px;
+  color: #ffffff;
+  line-height: 20px;
+}
+
+.game-overlay p {
+  font-size: 1.0rem; /* Increased font size for details */
+  color: #ffffff84;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 10px;
+}
+
+
+/* Game Grid Section */
+.game-gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.game-gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+/*seperateed section for game card 1*/
+.game-card {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(0, 114, 245);
+}
+
+.game-card:hover img {
+  transform: scale(1.05);
+}
+
+.game-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.game-card:hover .game-overlay {
+  transform: translateY(0);
+}
+
+
+/*seperateed section for game card 2*/
+.game-card2 {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.game-card2 img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+
+.game-card2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(253, 118, 0);
+}
+
+.game-card2:hover img {
+  transform: scale(1.05);
+}
+
+.game-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.game-card2:hover .game-overlay {
+  transform: translateY(0);
+}
+
+
+/*seperateed section for game card 3*/
+.game-card3:hover .game-overlay {
+  transform: translateY(0);
+}
+
+.game-card3 {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.game-card3 img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.game-card3:hover {
+  border-radius: 10px;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(210, 10, 33);
+}
+
+.game-card3:hover img {
+  transform: scale(1.05);
+}
+
+.game-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.game-card3:hover .game-overlay {
+  transform: translateY(0);
+}
+
+
+
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #1e1e2f;
+  color: #a8a8a8;
+}
+
+/* Footer */
+footer {
+background-color: #1d3557;
+padding: 40px 0;
+color: #a8dadc;
+text-align: center;
+}
+
+.footer-container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px;
+}
+
+.footer-section {
+width: 30%;
+flex: 1;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.footer-section h3 {
+font-size: 1.4em;
+margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+color: #a8dadc;
+text-decoration: none;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section a:hover {
+color: #e76f51;
+transform: scale(1.1);
+}
+
+.footer-section ul {
+list-style: none;
+}
+
+.footer-section ul li {
+margin-bottom: 10px;
+}
+
+.footer-bottom {
+margin-top: 30px;
+border-top: 1px solid #457b9d;
+padding-top: 15px;
+font-size: 0.8em;
+color: #a8dadc;
+}
+
+/* Header */
+@media (max-width: 768px) {
+    header .containerheader {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header .logo {
+      margin-left: 0; /* Center the logo */
+      width: 200px; /* Reduce logo size */
+      height: auto;
+      margin-bottom: 20px; /* Space out the logo from the nav */
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      align-items: center; /* Center the nav items */
+      gap: 20px;
+    }
+  
+    header nav ul li a {
+      font-size: 16px; /* Adjust font size for mobile */
+      text-align: center; /* Center align links */
+    }
+  }
+  
+  /* Hero Images */
+  @media (max-width: 768px) {
+    .hero-container {
+      height: 400px; /* Adjust height of hero container for mobile */
+    }
+  
+    .slideshow-container {
+      height: 100%;
+    }
+  
+    .hero-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Categories */
+  @media (max-width: 768px) {
+    .categories {
+      flex-direction: column; /* Stack categories vertically */
+      gap: 30px;
+      align-items: center; /* Center align the categories */
+    }
+  
+    .category {
+      width: 90%; /* Make categories wider on mobile */
+      margin: 0; /* Remove margin for mobile */
+    }
+  
+    .category-img {
+      width: 100%; /* Ensure the image inside categories scales correctly */
+      height: auto;
+    }
+  
+    /* Ensure the categories text is centered */
+    .category h3, .category p {
+      text-align: center;
+    }
+  }
+  
+  /* Adjustments for Extra Small Screens (e.g., mobile phones) */
+  @media (max-width: 480px) {
+    body {
+      padding: 0 10px; /* Add padding to prevent content from touching edges */
+    }
+  
+    header nav ul li a {
+      font-size: 14px; /* Further reduce font size for very small screens */
+    }
+  
+    .hero-container {
+      height: 300px; /* Reduce hero section height on very small screens */
+    }
+  
+    .category {
+      width: 100%; /* Make categories full width on smaller screens */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    footer .footer-container {
+      flex-direction: column; /* Stack footer items vertically */
+      align-items: center;
+    }
+  
+    footer .footer-section {
+      width: 100%; /* Make footer sections full width */
+    }
+  
+    .footer-bottom {
+      font-size: 0.7em; /* Reduce footer text size */
+    }
+  }
+  
+
+  
+  /* Basic Styles for Hamburger Menu */
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 999; /* Ensure it sits on top */
+  }
+  
+  .hamburger-menu .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #edf2f4;
+    border-radius: 5px;
+  }
+  
+  /* Hide the checkbox by default */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Navigation Menu */
+  #nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  #nav-list li a {
+    color: #edf2f4;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    header .containerheader {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header .logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    /* Initially hide the navigation menu on mobile */
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      display: none; /* Hide menu by default */
+      width: 100%;
+      padding: 20px 0;
+      background-color: #2b2d42; /* Menu background color */
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    /* Show hamburger on small screens */
+    .hamburger-menu {
+      display: flex;
+    }
+  
+    /* When the checkbox is checked, show the menu */
+    .menu-toggle:checked + .hamburger-menu + #nav-list {
+      display: flex;
+    }
+  
+    /* Mobile styles for links */
+    header nav ul li a {
+      font-size: 20px;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }

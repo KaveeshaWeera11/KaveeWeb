@@ -1,0 +1,213 @@
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .categories {
+      justify-content: center;
+    }
+  
+    .category {
+      width: 100%; 
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Header */
+  @media (max-width: 768px) {
+    header .containerheader {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header .logo {
+      margin-left: 0; /* Center the logo */
+      width: 200px; /* Reduce logo size */
+      height: auto;
+      margin-bottom: 20px; /* Space out the logo from the nav */
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      align-items: center; /* Center the nav items */
+      gap: 20px;
+    }
+  
+    header nav ul li a {
+      font-size: 16px; /* Adjust font size for mobile */
+      text-align: center; /* Center align links */
+    }
+  }
+  
+  /* Hero Images */
+  @media (max-width: 768px) {
+    .hero-container {
+      height: 400px; /* Adjust height of hero container for mobile */
+    }
+  
+    .slideshow-container {
+      height: 100%;
+    }
+  
+    .hero-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Categories */
+  @media (max-width: 768px) {
+    .categories {
+      flex-direction: column; /* Stack categories vertically */
+      gap: 30px;
+      align-items: center; /* Center align the categories */
+    }
+  
+    .category {
+      width: 90%; /* Make categories wider on mobile */
+      margin: 0; /* Remove margin for mobile */
+    }
+  
+    .category-img {
+      width: 100%; /* Ensure the image inside categories scales correctly */
+      height: auto;
+    }
+  
+    /* Ensure the categories text is centered */
+    .category h3, .category p {
+      text-align: center;
+    }
+  }
+  
+  /* Adjustments for Extra Small Screens (e.g., mobile phones) */
+  @media (max-width: 480px) {
+    body {
+      padding: 0 10px; /* Add padding to prevent content from touching edges */
+    }
+  
+    header nav ul li a {
+      font-size: 14px; /* Further reduce font size for very small screens */
+    }
+  
+    .hero-container {
+      height: 300px; /* Reduce hero section height on very small screens */
+    }
+  
+    .category {
+      width: 100%; /* Make categories full width on smaller screens */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    footer .footer-container {
+      flex-direction: column; /* Stack footer items vertically */
+      align-items: center;
+    }
+  
+    footer .footer-section {
+      width: 100%; /* Make footer sections full width */
+    }
+  
+    .footer-bottom {
+      font-size: 0.7em; /* Reduce footer text size */
+    }
+  }
+  
+  
+  
+  
+  
+  /* Basic Styles for Hamburger Menu */
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 999; /* Ensure it sits on top */
+  }
+  
+  .hamburger-menu .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #edf2f4;
+    border-radius: 5px;
+  }
+  
+  /* Hide the checkbox by default */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Navigation Menu */
+  #nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  #nav-list li a {
+    color: #edf2f4;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    header .containerheader {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header .logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    /* Initially hide the navigation menu on mobile */
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      display: none; /* Hide menu by default */
+      width: 100%;
+      padding: 20px 0;
+      background-color: #2b2d42; /* Menu background color */
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    /* Show hamburger on small screens */
+    .hamburger-menu {
+      display: flex;
+    }
+  
+    /* When the checkbox is checked, show the menu */
+    .menu-toggle:checked + .hamburger-menu + #nav-list {
+      display: flex;
+    }
+  
+    /* Mobile styles for links */
+    header nav ul li a {
+      font-size: 20px;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
