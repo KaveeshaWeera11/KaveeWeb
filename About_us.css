@@ -59,7 +59,7 @@ header {
 
 header .containerheader {
   display: flex;
-  justify-content: flex-start; /* Keeps the logo on the left */
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -79,7 +79,7 @@ header nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 40px; /* Adjusted gap for better spacing */
+  gap: 40px; 
   margin: 0;
 }
 
@@ -93,16 +93,16 @@ header nav ul li a {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  text-decoration: none; /* Removes underline */
+  text-decoration: none; 
   transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 15px 25px; /* Added padding for better clickability */
-  border-radius: 6px;  /* Slight rounding for smoother edges */
+  padding: 15px 25px; 
+  border-radius: 6px;  
 }
 
 header nav ul li a:hover {
-  color: #14213d; /* Premium hover color */
-  transform: scale(1.05); /* Subtle scaling effect */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+  color: #14213d;
+  transform: scale(1.05); 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
 }
 
 header nav ul li a:before {
@@ -112,7 +112,7 @@ header nav ul li a:before {
   height: 3px;
   bottom: -5px;
   left: 0;
-  background-color: #d90429; /* Underline color matching hover color */
+  background-color: #d90429;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -121,7 +121,7 @@ header nav ul li a:before {
 header nav ul li a:hover:before {
   transform: scaleX(1);
   transform-origin: bottom left;
-  background-color: #14213d; /* Underline color changes on hover for a refined effect */
+  background-color: #14213d; 
 }
 
 @keyframes slideInHeader {
@@ -168,7 +168,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay to improve readability */
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
     border-radius: 20px;
 }
@@ -235,16 +235,14 @@ main {
     color: #8d99ae;
 }
 
-
-/* Section Titles */
 .section-title {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #ffffff; /* Dark Blue */
+    color: #ffffff; 
 }
 
-/* Branch Section */
+/* Branches */
 .branches-container {
   display: flex;
   justify-content: center;
@@ -257,7 +255,7 @@ main {
   background: linear-gradient(135deg, #264653, #2b2d42);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 25%; /* Adjust card width */
+  width: 25%;
   padding: 1rem;
   text-align: center;
   display: flex;
@@ -268,7 +266,7 @@ main {
 
 .branch-title {
     font-size: 1.5rem;
-    color: #ffffff; /* Crimson Red */
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -280,39 +278,39 @@ main {
 }
 
 .branch-map {
-  margin: 2rem auto; /* Center the section */
-  width: 60%; /* Adjust width to make it smaller */
-  height: auto; /* Ensure aspect ratio is maintained */
-  border-radius: 15px; /* Smooth edges for a premium feel */
-  overflow: hidden; /* Remove any overflow */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
+  margin: 2rem auto;
+  width: 60%; 
+  height: auto; 
+  border-radius: 15px; 
+  overflow: hidden; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #264653, #457b9d); /* Premium gradient background */
-  padding: 10px; /* Add spacing inside the container */
+  background: linear-gradient(135deg, #264653, #457b9d); /*gradient background*/
+  padding: 10px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .branch-map:hover {
-  transform: scale(1.05); /* Subtle scaling effect on hover */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
 }
 
 
 .branch-hours, 
 .branch-description {
     font-size: 1rem;
-    color: #ffffff; /* Deep Navy Blue */
+    color: #ffffff; 
     margin-bottom: 0.5rem;
 }
 
-/* Summary Table */
+/*Table*/
 .store-table {
     width: 90%;
     margin: 2rem auto;
     border-collapse: collapse;
-    background-color: #0000001f; /* Light background */
+    background-color: #0000001f; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -320,29 +318,26 @@ main {
 .store-table td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #d90429; /* Deep Red */
+    border-bottom: 1px solid #d90429; 
 }
 
 .store-table th {
-    background-color: #14213d; /* Dark Blue */
-    color: #edf2f4; /* Off White */
+    background-color: #14213d;
+    color: #edf2f4; 
 }
 
 .store-table tr:hover {
-    background-color: #8d99ae; /* Slate Gray */
-    color: #edf2f4; /* Off White */
+    background-color: #8d99ae;
+    color: #edf2f4;
 }
 
 .store-table tfoot {
     text-align: center;
-    background-color: #ef233c; /* Crimson Red */
-    color: #edf2f4; /* Off White */
+    background-color: #ef233c; 
+    color: #edf2f4; 
     font-weight: bold;
 }
 
-
-
-/* Footer */
 footer {
     background-color: #1d3557;
     padding: 40px 0;
@@ -396,12 +391,6 @@ footer {
     color: #a8dadc;
   }
 
-
-
-
-
-
-  /* Header */
 @media (max-width: 768px) {
     header .containerheader {
       flex-direction: column;
@@ -409,28 +398,27 @@ footer {
     }
   
     header .logo {
-      margin-left: 0; /* Center the logo */
-      width: 200px; /* Reduce logo size */
+      margin-left: 0; 
+      width: 200px;
       height: auto;
-      margin-bottom: 20px; /* Space out the logo from the nav */
+      margin-bottom: 20px; 
     }
   
     header nav ul {
       flex-direction: column;
-      align-items: center; /* Center the nav items */
+      align-items: center; 
       gap: 20px;
     }
   
     header nav ul li a {
-      font-size: 16px; /* Adjust font size for mobile */
-      text-align: center; /* Center align links */
+      font-size: 16px; 
+      text-align: center; 
     }
   }
-  
-  /* Hero Images */
+
   @media (max-width: 768px) {
     .hero-container {
-      height: 400px; /* Adjust height of hero container for mobile */
+      height: 400px;
     }
   
     .slideshow-container {
@@ -442,75 +430,66 @@ footer {
       height: auto;
     }
   }
-  
-  /* Categories */
+
   @media (max-width: 768px) {
     .categories {
-      flex-direction: column; /* Stack categories vertically */
+      flex-direction: column; 
       gap: 30px;
-      align-items: center; /* Center align the categories */
-    }
+      align-items: center;     }
   
     .category {
-      width: 90%; /* Make categories wider on mobile */
-      margin: 0; /* Remove margin for mobile */
+      width: 90%; 
+      margin: 0; 
     }
   
     .category-img {
-      width: 100%; /* Ensure the image inside categories scales correctly */
+      width: 100%; 
       height: auto;
     }
-  
-    /* Ensure the categories text is centered */
+
     .category h3, .category p {
       text-align: center;
     }
   }
   
-  /* Adjustments for Extra Small Screens (e.g., mobile phones) */
+
   @media (max-width: 480px) {
     body {
-      padding: 0 10px; /* Add padding to prevent content from touching edges */
+      padding: 0 10px; 
     }
   
     header nav ul li a {
-      font-size: 14px; /* Further reduce font size for very small screens */
+      font-size: 14px;
     }
   
     .hero-container {
-      height: 300px; /* Reduce hero section height on very small screens */
+      height: 300px;
     }
   
     .category {
-      width: 100%; /* Make categories full width on smaller screens */
-      padding: 10px; /* Reduce padding */
+      width: 100%; 
+      padding: 10px; 
     }
   
     footer .footer-container {
-      flex-direction: column; /* Stack footer items vertically */
+      flex-direction: column; /* 
       align-items: center;
     }
   
     footer .footer-section {
-      width: 100%; /* Make footer sections full width */
+      width: 100%; 
     }
   
     .footer-bottom {
-      font-size: 0.7em; /* Reduce footer text size */
+      font-size: 0.7em;
     }
-  }
-  
-  
-  
-  
-  
-  /* Basic Styles for Hamburger Menu */
+
   .hamburger-menu {
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
-    z-index: 999; /* Ensure it sits on top */
+    z-index: 999; 
   }
   
   .hamburger-menu .bar {
@@ -519,13 +498,11 @@ footer {
     background-color: #edf2f4;
     border-radius: 5px;
   }
-  
-  /* Hide the checkbox by default */
+
   .menu-toggle {
     display: none;
   }
-  
-  /* Navigation Menu */
+
   #nav-list {
     list-style: none;
     display: flex;
@@ -539,8 +516,7 @@ footer {
     font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
   }
-  
-  /* Media Queries */
+
   @media (max-width: 768px) {
     header .containerheader {
       flex-direction: column;
@@ -552,16 +528,15 @@ footer {
       height: auto;
       margin-bottom: 20px;
     }
-  
-    /* Initially hide the navigation menu on mobile */
+
     header nav ul {
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      display: none; /* Hide menu by default */
+      display: none;
       width: 100%;
       padding: 20px 0;
-      background-color: #2b2d42; /* Menu background color */
+      background-color: #2b2d42; 
       position: absolute;
       top: 70px;
       left: 0;
@@ -569,17 +544,14 @@ footer {
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
   
-    /* Show hamburger on small screens */
     .hamburger-menu {
       display: flex;
     }
   
-    /* When the checkbox is checked, show the menu */
     .menu-toggle:checked + .hamburger-menu + #nav-list {
       display: flex;
     }
   
-    /* Mobile styles for links */
     header nav ul li a {
       font-size: 20px;
       padding: 10px;
