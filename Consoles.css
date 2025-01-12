@@ -59,7 +59,7 @@ header {
 
 header .containerheader {
   display: flex;
-  justify-content: flex-start; /* Keeps the logo on the left */
+  justify-content: flex-start; 
   align-items: center;
 }
 
@@ -79,7 +79,7 @@ header nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 40px; /* Adjusted gap for better spacing */
+  gap: 40px; 
   margin: 0;
 }
 
@@ -93,16 +93,16 @@ header nav ul li a {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  text-decoration: none; /* Removes underline */
+  text-decoration: none; 
   transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 15px 25px; /* Added padding for better clickability */
-  border-radius: 6px;  /* Slight rounding for smoother edges */
+  padding: 15px 25px; 
+  border-radius: 6px;  
 }
 
 header nav ul li a:hover {
-  color: #14213d; /* Premium hover color */
-  transform: scale(1.05); /* Subtle scaling effect */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+  color: #14213d; 
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
 }
 
 header nav ul li a:before {
@@ -112,7 +112,7 @@ header nav ul li a:before {
   height: 3px;
   bottom: -5px;
   left: 0;
-  background-color: #d90429; /* Underline color matching hover color */
+  background-color: #d90429; 
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -121,7 +121,7 @@ header nav ul li a:before {
 header nav ul li a:hover:before {
   transform: scaleX(1);
   transform-origin: bottom left;
-  background-color: #14213d; /* Underline color changes on hover for a refined effect */
+  background-color: #14213d; 
 }
 
 @keyframes slideInHeader {
@@ -146,9 +146,6 @@ header nav ul li a:hover:before {
   }
 }
 
-
-
-/* Hamburger Menu (for smaller screens) */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -159,14 +156,14 @@ header nav ul li a:hover:before {
 .hamburger-menu .bar {
   width: 25px;
   height: 3px;
-  background: #edf2f4; /* Off White */
+  background: #edf2f4; 
 }
 
 @media (max-width: 768px) {
   nav ul {
       display: none;
       flex-direction: column;
-      background: #14213d; /* Midnight Blue */
+      background: #14213d; 
       position: absolute;
       top: 60px;
       right: 20px;
@@ -188,7 +185,6 @@ header nav ul li a:hover:before {
   }
 }
 
-/* Main Section */
 main {
   padding: 20px;
 }
@@ -209,18 +205,18 @@ h1 {
 
 .item {
   position: relative;
-  background: #14213d; /* Teal Blue */
+  background: #14213d; 
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
   padding: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle box shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 204, 255, 0.3); /* Enhance shadow on hover */
+  box-shadow: 0 10px 20px rgba(0, 204, 255, 0.3); 
 }
 
 .item img {
@@ -234,7 +230,7 @@ h1 {
 }
 
 .item p {
-  color: #a8dadc; /* Soft Teal */
+  color: #a8dadc; 
 }
 
 .overlay {
@@ -257,7 +253,7 @@ h1 {
 
 .overlay p {
   font-size: 2.5rem;
-  color: #a8dadc; /* Coral Red */
+  color: #a8dadc; 
   font-weight: bold;
 }
 
@@ -315,8 +311,6 @@ footer {
   color: #a8dadc;
 }
 
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
       flex-direction: column;
