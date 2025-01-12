@@ -59,7 +59,7 @@
   
   header .containerheader {
     display: flex;
-    justify-content: flex-start; /* Keeps the logo on the left */
+    justify-content: flex-start; 
     align-items: center;
   }
   
@@ -79,7 +79,7 @@
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 40px; /* Adjusted gap for better spacing */
+    gap: 40px; 
     margin: 0;
   }
   
@@ -93,16 +93,16 @@
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 1px;
-    text-decoration: none; /* Removes underline */
+    text-decoration: none; 
     transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 15px 25px; /* Added padding for better clickability */
-    border-radius: 6px;  /* Slight rounding for smoother edges */
+    padding: 15px 25px; 
+    border-radius: 6px;  
   }
   
   header nav ul li a:hover {
-    color: #14213d; /* Premium hover color */
-    transform: scale(1.05); /* Subtle scaling effect */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+    color: #14213d; 
+    transform: scale(1.05); 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
   }
   
   header nav ul li a:before {
@@ -112,7 +112,7 @@
     height: 3px;
     bottom: -5px;
     left: 0;
-    background-color: #d90429; /* Underline color matching hover color */
+    background-color: #d90429; 
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -121,7 +121,7 @@
   header nav ul li a:hover:before {
     transform: scaleX(1);
     transform-origin: bottom left;
-    background-color: #14213d; /* Underline color changes on hover for a refined effect */
+    background-color: #14213d; 
   }
   
   @keyframes slideInHeader {
@@ -147,18 +147,16 @@
   }
   
   
-  
-/* Reset and General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2b2d42; /* Deep Navy Blue */
-    color: #edf2f4; /* Off White */
+    background-color: #2b2d42; 
+    color: #edf2f4; 
 }
 
 header {
-    background: linear-gradient(to right, #ef233c, #d90429); /* Crimson Red to Deep Red */
+    background: linear-gradient(to right, #ef233c, #d90429); 
     color: #edf2f4;
     padding: 1rem;
     display: flex;
@@ -184,25 +182,25 @@ h1{
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background-color: #264653; /* Teal Blue */
-    transition: box-shadow 0.4s ease, transform 0.4s ease; /* Add smooth transition for hover effects */
+    background-color: #264653; 
+    transition: box-shadow 0.4s ease, transform 0.4s ease; 
 }
 
 .game-card:hover {
     box-shadow: 0 0 20px 5px rgb(239, 35, 59), 
-                0 0 40px 10px rgb(185, 19, 19); /* Neon crimson red effect */
-    transform: scale(1.05); /* Slight scale effect for emphasis */
+                0 0 40px 10px rgb(185, 19, 19); 
+    transform: scale(1.05); 
 }
 
 .game-card img {
     width: 100%;
     height: 100%;
     display: block;
-    transition: transform 0.4s ease; /* Smooth image zoom effect */
+    transition: transform 0.4s ease; 
 }
 
 .game-card:hover img {
-    transform: scale(1.1); /* Zoom in on hover */
+    transform: scale(1.1);
 }
 
 .game-overlay {
@@ -211,20 +209,20 @@ h1{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    color: #edf2f4; /* Off White */
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #edf2f4; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1rem;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.4s ease; /* Fade effect */
+    opacity: 0; 
+    transition: opacity 0.4s ease; 
 }
 
 .game-card:hover .game-overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1; 
 }
 
 .game-overlay h3 {
@@ -238,13 +236,9 @@ h1{
 }
 
 .game-overlay strong {
-    color:#ffffffc1; /* Coral Red */
+    color:#ffffffc1; 
 }
 
-
-
-
-/* Footer */
 footer {
     background-color: #1d3557;
     padding: 40px 0;
